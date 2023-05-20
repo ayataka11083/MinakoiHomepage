@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>6-1-7 複数画像を中央に注目させて見せる</title>
+<meta name="description"  content="書籍「動くWebデザインアイディア帳」のサンプルサイトです">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="arasuzi_text.css"><!--テキストファイルを読み込む-->
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="slider.css">
+
+<style>
+  html {
+      background-color: #ebbb81;
+  }
+  
+  .cd1 {
+      background-color: #ffffff;
+      padding: 30px 30px 30px;
+      max-width: 1920px;
+      width:93%;
+      height: 7000px;
+      margin: 10px 20px 50px 20px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+      border-radius: 3px;
+      position: absolute;
+      z-index: -1;
+      vertical-align:top;
+  }
+  .cd2 {
+      background-color: antiquewhite;
+      padding: 0px 10px 10px;
+      max-width: 1920px;
+      width:93%;
+      height: 2000px;
+      margin: 50px 20px 10px 20px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+      border-radius: 3px;
+      position: absolute;
+      z-index: -1;
+      vertical-align:top;
+  }
+  .cd3 {
+      background-color: antiquewhite;
+      padding: 0px 10px 10px;
+      max-width: 1920px;
+      width:93%;
+      height: 1500px;
+      margin: 1650px 20px 10px 20px;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+      border-radius: 3px;
+      position: absolute;
+      z-index: -1;
+  }
+
+  .title {
+      font-weight: normal;
+      padding-bottom: 0;
+      text-align: start;
+      position: relative;
+      margin: -20px -20px 70px -20px;
+      letter-spacing: 0;
+  }
+
+  .image_m {
+      font-weight: normal;
+      padding-bottom: 0;
+      text-align: start;
+      position: relative;
+      margin: 0 0 0 0;
+      letter-spacing: 0;
+      vertical-align:top;
+  }
+  .center{
+      width: 600px;
+      
+  }
+  .flex{
+      display: flex;
+      justify-content: space-between;
+  }
+  .tag1{
+      font-size: 50px;
+      width: 300px;           
+      margin:0em ;
+      display:inline-block;
+      position:relative;
+      top:0px;
+      padding:0 .5em;
+      height:1.5em;
+      line-height:1.5em;
+      color:#000000;
+      background:rgb(224, 168, 93);
+      border:solid 3px rgb(246, 181, 96);
+      font-weight:bold;
+      text-align:center;
+      border-radius:5px 5px 0 0;
+  }
+  .tag2{
+      background:rgba(255,255,255,0);
+      border:solid 3px rgb(246, 181, 96);
+      background:antiquewhite;
+      border-radius:0 5px 5px;
+      padding:20px;
+      font-size: 100%;
+      height: 500px;
+  }
+  .news_title{
+      background: #f2ca89; 
+      border: 3px solid #ffbb4d;
+      padding-left: 30px;
+      font-size: 30px;
+      width: 500px;
+  }
+  .news_text{
+      border: 1px solid #ffbb4d;
+      background-color: #ffffff;
+      font-size: 20px;
+      padding: 20px;
+      width: 500px;
+  }
+</style>
+
+</head>
+
+<body>
+
+<h2>複数画像を中央に注目させて見せる</h2>
+<div class="cd1">
+  <div class="cd2">
+    <ul class="slider">
+        <li><img src="印南原舟生.jpg" alt="" width="405px" height="590px"></li>
+        <li><img src="田辺むつみ.jpg" alt="" width="405px" height="590px"></li>
+        <li><img src="御坊勾泉.jpg" alt="" width="405px" height="590px"></li>
+        <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/img/img_04.jpg" alt="" width="405px" height="590px"></li>
+        <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/img/img_05.jpg" alt="" width="405px" height="590px"></li>
+        <li><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/img/img_06.jpg" alt="" width="405px" height="590px"></li>
+      <!--/slider--></ul>
+      <p>使用したライブラリ：<a href="https://kenwheeler.github.io/slick/" target="_blank">https://kenwheeler.github.io/slick/</a></p>
+</div>
+    <div id="insertText"></div>
+    <script>
+      fetch( "あらすじ.txt" ).then( res => res.text() ).then( text => {document.getElementById( "insertText" ).textContent = text;} );
+    </script>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!--自作のJS-->
+<script src="slider.js"></script>
+</body>
+</body>
+</html>

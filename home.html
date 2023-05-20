@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="button_style.css"><!--ボタンの設定-->
+    <link rel="stylesheet" type="text/css" href="top_button.css"><!--topに戻る-->
+    <link rel="stylesheet" type="text/css" href="arasuzi_text.css"><!--テキストファイルを読み込む-->
+
+    <!--スライダー-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
+
+    <title>みなこいホームページ</title>
+
+    <style>
+        html {
+            background-color: #ebbb81;
+        }
+        
+        .cd1 {
+            background-color: #ffffff;
+            padding: 30px 30px 30px;
+            max-width: 1920px;
+            width:93%;
+            height: 7000px;
+            margin: 10px 20px 50px 20px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+            border-radius: 3px;
+            position: absolute;
+            z-index: -1;
+            vertical-align:top;
+        }
+        .cd2 {
+            background-color: antiquewhite;
+            padding: 0px 10px 10px;
+            max-width: 1920px;
+            width:93%;
+            height: 1550px;
+            margin: 50px 20px 10px 20px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+            border-radius: 3px;
+            position: absolute;
+            z-index: -1;
+            vertical-align:top;
+        }
+        .cd3 {
+            background-color: antiquewhite;
+            padding: 0px 10px 10px;
+            max-width: 1920px;
+            width:93%;
+            height: 1500px;
+            margin: 1650px 20px 10px 20px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
+            border-radius: 3px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .title {
+            font-weight: normal;
+            padding-bottom: 0;
+            text-align: start;
+            position: relative;
+            margin: -20px -20px 70px -20px;
+            letter-spacing: 0;
+        }
+
+        .image_m {
+            font-weight: normal;
+            padding-bottom: 0;
+            text-align: start;
+            position: relative;
+            margin: 0 0 0 0;
+            letter-spacing: 0;
+            vertical-align:top;
+        }
+        .center{
+            width: 600px;
+            
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        .tag1{
+            font-size: 50px;
+            width: 300px;           
+            margin:0em ;
+            display:inline-block;
+            position:relative;
+            top:0px;
+            padding:0 .5em;
+            height:1.5em;
+            line-height:1.5em;
+            color:#000000;
+            background:rgb(224, 168, 93);
+            border:solid 3px rgb(246, 181, 96);
+            font-weight:bold;
+            text-align:center;
+            border-radius:5px 5px 0 0;
+        }
+        .tag2{
+            background:rgba(255,255,255,0);
+            border:solid 3px rgb(246, 181, 96);
+            background:antiquewhite;
+            border-radius:0 5px 5px;
+            padding:20px;
+            font-size: 100%;
+            height: 500px;
+        }
+        .news_title{
+            background: #f2ca89; 
+            border: 3px solid #ffbb4d;
+            padding-left: 30px;
+            font-size: 30px;
+            width: 500px;
+        }
+        .news_text{
+            border: 1px solid #ffbb4d;
+            background-color: #ffffff;
+            font-size: 20px;
+            padding: 20px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="home.png" alt=""height="450px"width="100%"><!--表紙-->
+    
+    <!--topに戻るときの目印-->
+    <div id="footer"></div>
+    <div id="header"></div>
+
+    <!--ボタン-->
+    <nobr style="vertical-align: bottom;" >
+        <a href="#news" class="btn btn-flat"><span>お知らせ</span></a>
+        <a href="#story" class="btn btn-flat"><span>あらすじ</span></a>
+        <a href="#game" class="btn btn-flat"><span>ゲーム紹介</span></a>
+        <a href="#character" class="btn btn-flat"><span>キャラ紹介</span></a>
+        <a href="#product" class="btn btn-flat"><span>製品紹介</span></a>
+    </nobr><br>
+
+
+    <div class="cd1">
+        <div class="tag1" id="news">お知らせ</div>
+        <div class="tag2"style="height: 630px;">
+            <div class="flex"><!--flex・・・画像やテキストを横並び-->
+                <p>
+                    <div><!--予定・お知らせ-->
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
+                            <div class="news_text">ホーム画面作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
+                            <div class="news_text">ゲーム作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
+                            <div class="news_text">リリース</div>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <!--twitter-->
+                    <a
+                    class="twitter-timeline" 
+                    data-lang="ja" 
+                    data-width="540" 
+                    data-height="560" 
+                    data-theme="light" 
+                    href="https://twitter.com/ayataka11083?ref_src=twsrc%5Etfw">Tweets by ayataka11083
+                   </a>
+                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </p>
+            </div>
+        </div>
+
+        <div class="tag1" id="story"style="margin-top:50px;">あらすじ</div> 
+        <div class="tag2"style="height: 2400px;">
+            <div class="flex"><!--flex・・・画像やテキストを横並び-->
+                <object data="あらすじ.txt" type="text/plain" style="margin-left:350px ;"></object>
+            </div>
+        </div>
+
+        <div class="tag1" id="game"style="margin-top:50px;width: 400px;">ゲーム紹介</div> 
+        <div class="tag2"style="height: 620px;">
+            <div class="flex"><!--flex・・・画像やテキストを横並び-->
+                <p>
+                    <div><!--予定・お知らせ-->
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
+                            <div class="news_text">ホーム画面作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
+                            <div class="news_text">ゲーム作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
+                            <div class="news_text">リリース</div>
+                        </div>
+                    </div>
+                </p>
+                <p><!--youtube-->
+                    <iframe 
+                    width="640" 
+                    height="360" 
+                    src="https://www.youtube.com/embed/NH4TEiUvIqI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                    </iframe>
+                </p>
+            </div>
+        </div>
+
+        <div class="tag1" id="character"style="margin-top:50px;width: 600px;">キャラ紹介</div> 
+        <div class="tag2"style="height: 1000px;">
+            <!--/slider-->
+            <ul class="slider"><!--4つ以上objectがないとバグる?-->
+                <li><img src="印南原舟生.jpg" alt=""></li>
+                <li><img src="田辺むつみ.jpg" alt=""></li>
+                <li><img src="御坊勾泉.jpg"   alt=""></li>
+                <li><img src="ka.png" alt=""></li>
+            </ul>
+
+        </div>
+
+        <div class="tag1" id="product"style="margin-top:50px;width: 400px;">製品紹介</div> 
+        <div class="tag2"style="height: 620px;">
+            <div class="flex"><!--flex・・・画像やテキストを横並び-->
+                <p>
+                    <div><!--予定・お知らせ-->
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
+                            <div class="news_text">ホーム画面作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
+                            <div class="news_text">ゲーム作成</div>
+                        </div><br>
+                        <div style="margin-top: 50px;">
+                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
+                            <div class="news_text">リリース</div>
+                        </div>
+                    </div>
+                </p>
+                <p><!--youtube-->
+                    <iframe 
+                    width="640" 
+                    height="360" 
+                    src="https://www.youtube.com/embed/NH4TEiUvIqI" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                    </iframe>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+        <!--topに戻る-->
+        <p id="page-top" ><a href="#"><span style="font-size: 15px;"><b>Page Top</b></span></a></p>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="top_button.js"></script>
+
+        <!--スライダー-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="slider.js"></script>
+        
+</body>
+</html>
