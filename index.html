@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="button_style.css"><!--ボタンの設定-->
     <link rel="stylesheet" type="text/css" href="top_button.css"><!--topに戻る-->
     <link rel="stylesheet" type="text/css" href="arasuzi_text.css"><!--テキストファイルを読み込む-->
+    <link rel="stylesheet" type="text/css" href="style.css"><!--文字、画像、背景などのスタイル設定-->
 
     <!--スライダー-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
@@ -15,50 +17,9 @@
     <title>みなこいホームページ</title>
 
     <style>
-        html {
-            background-color: #ebbb81;
-        }
-        
-        .cd1 {
-            background-color: #ffffff;
-            padding: 30px 30px 30px;
-            max-width: 1920px;
-            width:93%;
-            height: 7000px;
-            margin: 10px 20px 50px 20px;
-            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
-            border-radius: 3px;
-            position: absolute;
-            z-index: -1;
-            vertical-align:top;
-        }
-        .cd2 {
-            background-color: antiquewhite;
-            padding: 0px 10px 10px;
-            max-width: 1920px;
-            width:93%;
-            height: 1550px;
-            margin: 50px 20px 10px 20px;
-            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
-            border-radius: 3px;
-            position: absolute;
-            z-index: -1;
-            vertical-align:top;
-        }
-        .cd3 {
-            background-color: antiquewhite;
-            padding: 0px 10px 10px;
-            max-width: 1920px;
-            width:93%;
-            height: 1500px;
-            margin: 1650px 20px 10px 20px;
-            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.18);
-            border-radius: 3px;
-            position: absolute;
-            z-index: -1;
-        }
 
         .title {
+            font-family: serif;
             font-weight: normal;
             padding-bottom: 0;
             text-align: start;
@@ -80,11 +41,8 @@
             width: 600px;
             
         }
-        .flex{
-            display: flex;
-            justify-content: space-between;
-        }
         .tag1{
+            font-family: serif;
             font-size: 50px;
             width: 300px;           
             margin:0em ;
@@ -102,6 +60,7 @@
             border-radius:5px 5px 0 0;
         }
         .tag2{
+            font-family: serif;
             background:rgba(255,255,255,0);
             border:solid 3px rgb(246, 181, 96);
             background:antiquewhite;
@@ -110,100 +69,113 @@
             font-size: 100%;
             height: 500px;
         }
-        .news_title{
+        .character_name{
+            font-family: serif;
             background: #f2ca89; 
             border: 3px solid #ffbb4d;
             padding-left: 30px;
             font-size: 30px;
-            width: 500px;
+            width: 400px;
+            font-weight:bold;
+            margin:0% auto;
         }
-        .news_text{
+        .character_description{
+            font-family: serif;
             border: 1px solid #ffbb4d;
             background-color: #ffffff;
             font-size: 20px;
             padding: 20px;
-            width: 500px;
+            width: 400px;
+            font-weight:bold;
+            margin:0% auto;
+        }
+        .button_text{
+            font-family: serif;
+            font-size:xx-large;
+            font-weight: bold;
         }
     </style>
 </head>
 
-<body>
-    <img src="home.png" alt=""height="450px"width="100%"><!--表紙-->
-    
+<body class="background_back">
+    <div style="text-align: center;">
+        <img src="home.png" alt=""class="homepage_icon"><!--表紙-->
+    </div>
+
     <!--topに戻るときの目印-->
     <div id="footer"></div>
     <div id="header"></div>
 
     <!--ボタン-->
-    <nobr style="vertical-align: bottom;" >
-        <a href="#news" class="btn btn-flat"><span>お知らせ</span></a>
-        <a href="#story" class="btn btn-flat"><span>あらすじ</span></a>
-        <a href="#game" class="btn btn-flat"><span>ゲーム紹介</span></a>
-        <a href="#character" class="btn btn-flat"><span>キャラ紹介</span></a>
-        <a href="#product" class="btn btn-flat"><span>製品紹介</span></a>
-    </nobr><br>
+    <div style="text-align: center;">
+        <nobr style="vertical-align: bottom;" >
+            <a href="#news"      class="btn btn-flat"><span class="button_text">お知らせ  </span></a>
+            <a href="#story"     class="btn btn-flat"><span class="button_text">あらすじ  </span></a>
+            <a href="#game"      class="btn btn-flat"><span class="button_text">ゲーム紹介</span></a>
+            <a href="#character" class="btn btn-flat"><span class="button_text">キャラ紹介</span></a>
+            <a href="#product"   class="btn btn-flat"><span class="button_text">製品紹介  </span></a>
+        </nobr><br>
+    </div>
 
 
-    <div class="cd1">
-        <div class="tag1" id="news">お知らせ</div>
-        <div class="tag2"style="height: 630px;">
+    <div class="background_front">
+        <div class="board_title" id="news">お知らせ</div>
+        <div class="board_content"style="height: 630px;">
             <div class="flex"><!--flex・・・画像やテキストを横並び-->
-                <p>
+                <p style="padding-left: 20px;">
                     <div><!--予定・お知らせ-->
                         <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
-                            <div class="news_text">ホーム画面作成</div>
+                            <div class="news_title"><span style="color: #fff;">2023/7/02</span></div>
+                            <div class="news_text">
+                                みなこい計画始動
+                            </div>
                         </div><br>
                         <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
-                            <div class="news_text">ゲーム作成</div>
+                            <div class="news_title"><span style="color: #fff;">2023/7/03</span></div>
+                            <div class="news_text">
+                                ゲーム体験版配布<br>
+                                <a href="https://github.com/ayataka11083/mushigame">ダウンロードはこちらから</a>
+                            </div>
                         </div><br>
                         <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
-                            <div class="news_text">リリース</div>
+                            <div class="news_title"><span style="color: #fff;">2023/8?</span></div>
+                            <div class="news_text">
+                                リリース
+                            </div>
                         </div>
                     </div>
                 </p>
-                <p>
+                <p style="padding-left: 60px;">
                     <!--twitter-->
                     <a
                     class="twitter-timeline" 
                     data-lang="ja" 
-                    data-width="540" 
+                    data-width="350" 
                     data-height="560" 
                     data-theme="light" 
                     href="https://twitter.com/ayataka11083?ref_src=twsrc%5Etfw">Tweets by ayataka11083
-                   </a>
-                   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </p>
             </div>
         </div>
 
-        <div class="tag1" id="story"style="margin-top:50px;">あらすじ</div> 
-        <div class="tag2"style="height: 2400px;">
+        <div class="board_title" id="story"style="margin-top:50px;">あらすじ</div> 
+        <div class="board_content"style="height: 3500px; padding: 40px;">
             <div class="flex"><!--flex・・・画像やテキストを横並び-->
-                <object data="あらすじ.txt" type="text/plain" style="margin-left:350px ;"></object>
-            </div>
+                <div id="insertText"></div><!--あらすじのテキストファイルを読み込む-->
+                <script>
+                    fetch( "あらすじ.txt" ).then( res => res.text() ).then( text => {
+                    document.getElementById( "insertText" ).textContent = text;} );
+                </script>
+        </div>
         </div>
 
-        <div class="tag1" id="game"style="margin-top:50px;width: 400px;">ゲーム紹介</div> 
+        <div class="board_title" id="game"style="margin-top:100px;width: 400px;">ゲーム紹介</div> 
         <div class="tag2"style="height: 620px;">
             <div class="flex"><!--flex・・・画像やテキストを横並び-->
                 <p>
-                    <div><!--予定・お知らせ-->
-                        <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
-                            <div class="news_text">ホーム画面作成</div>
-                        </div><br>
-                        <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
-                            <div class="news_text">ゲーム作成</div>
-                        </div><br>
-                        <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
-                            <div class="news_text">リリース</div>
-                        </div>
-                    </div>
+
                 </p>
                 <p><!--youtube-->
                     <iframe 
@@ -219,41 +191,82 @@
             </div>
         </div>
 
-        <div class="tag1" id="character"style="margin-top:50px;width: 600px;">キャラ紹介</div> 
-        <div class="tag2"style="height: 1000px;">
+        <div class="board_title" id="character"style="margin-top:50px;width: 600px;">キャラ紹介</div> 
+        <div class="board_content"style="height: 1000px;">
             <!--/slider-->
             <ul class="slider"><!--4つ以上objectがないとバグる?-->
-                <li><img src="印南原舟生.jpg" alt=""></li>
-                <li><img src="田辺むつみ.jpg" alt=""></li>
-                <li><img src="御坊勾泉.jpg"   alt=""></li>
-                <li><img src="ka.png" alt=""></li>
+                <li><img src="印南原舟生.jpg" alt="">
+                    <div class="character_name"><span style="color: #fff;">印南原舟生</span></div>
+                    <div class="character_description">
+                        <p>
+                            性別：<br>
+                            年齢：<br>
+                            誕生日：<br>
+                            備考：
+                        </p>
+                    </div>
+                </li>
+                <li><img src="田辺むつみ.jpg" alt="">
+                    <div class="character_name"><span style="color: #fff;">田辺むつみ</span></div>
+                    <div class="character_description">
+                        <p>
+                            性別：<br>
+                            年齢：<br>
+                            誕生日：<br>
+                            備考：
+                        </p>
+                    </div>
+                </li>
+                <li><img src="御坊勾泉.jpg"   alt="">
+                    <div class="character_name"><span style="color: #fff;">御坊勾泉</span></div>
+                    <div class="character_description">
+                        <p>
+                            性別：<br>
+                            年齢：<br>
+                            誕生日：<br>
+                            備考：
+                        </p>
+                    </div>
+                </li>
+                <li><img src="ka.png" alt="">
+                    <div class="character_name"><span style="color: #fff;">蚊</span></div>
+                    <div class="character_description">
+                        <p>
+                            性別：<br>
+                            年齢：<br>
+                            誕生日：<br>
+                            備考：
+                        </p>
+                    </div>
+                </li>
             </ul>
 
         </div>
 
-        <div class="tag1" id="product"style="margin-top:50px;width: 400px;">製品紹介</div> 
-        <div class="tag2"style="height: 620px;">
+        <div class="board_title" id="product"style="margin-top:50px;width: 400px;">製品紹介</div> 
+        <div class="board_content"style="height: 620px;">
             <div class="flex"><!--flex・・・画像やテキストを横並び-->
-                <p>
+                <p style="padding-left: 20px;">
                     <div><!--予定・お知らせ-->
-                        <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/5/17</span></div>
-                            <div class="news_text">ホーム画面作成</div>
+                        <div style="margin-top: 120px;">
+                            <div class="news_title"><span style="color: #fff;">20223/7/03</span></div>
+                            <div class="news_text">
+                                ゲーム体験版配布<br>
+                                <a href="https://github.com/ayataka11083/mushigame">ダウンロードはこちらから</a>
+                            </div>
                         </div><br>
                         <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/01</span></div>
-                            <div class="news_text">ゲーム作成</div>
-                        </div><br>
-                        <div style="margin-top: 50px;">
-                            <div class="news_title"><span style="color: #fff;">2023/6/17</span></div>
-                            <div class="news_text">リリース</div>
+                            <div class="news_title"><span style="color: #fff;">20223/8?</span></div>
+                            <div class="news_text">
+                                リリース
+                            </div>
                         </div>
                     </div>
                 </p>
-                <p><!--youtube-->
+                <p style="padding-left: 20px;margin-top:140px;"><!--youtube-->
                     <iframe 
-                    width="640" 
-                    height="360" 
+                    width="400" 
+                    height="300" 
                     src="https://www.youtube.com/embed/NH4TEiUvIqI" 
                     title="YouTube video player" 
                     frameborder="0" 

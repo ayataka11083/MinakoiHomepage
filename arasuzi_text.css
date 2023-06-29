@@ -1,7 +1,7 @@
-object{
-    width:800px ;
-    height: 1600px;
-    background-color: #ffffff00;
-    color: #000000;
-    font-size: 40px;
+#insertText {
+    white-space: pre;
+    color: black;
+    font-size: 20px;
+    margin:0% auto;
+    font-weight: bold;
     }
